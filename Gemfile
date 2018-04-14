@@ -11,7 +11,7 @@ gem 'figaro' #for config management
 gem 'rails', '~> 5.1.4'
 
 # Use postgres as the database for Active Record
-gem 'pg', '0.21' #1.0.0 not supported until rails 5.15.rc1
+gem 'pg', '~> 1.0' #1.0.0 not supported until rails 5.15.rc1
 #https://github.com/rails/rails/issues/31673
 
 # Use Puma as the app server
