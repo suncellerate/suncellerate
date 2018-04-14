@@ -59,7 +59,7 @@ test:
 production:
   adapter: postgis
   encoding: unicode
-  database: suncellerate
+  database: postgres
   pool: 5
   username:
   password:
