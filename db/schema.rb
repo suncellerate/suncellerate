@@ -48,12 +48,19 @@ ActiveRecord::Schema.define(version: 20180414215344) do
   create_table "projects", force: :cascade do |t|
     t.string "description"
     t.integer "host_id"
+    t.string "address1"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.integer "postal_code"
+    t.string "country"
     t.geography "long_lat", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}
     t.integer "seeds_required"
     t.integer "share_price"
     t.integer "seeds_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["long_lat"], name: "index_projects_on_long_lat", using: :gist
   end
 
   create_table "seeds", force: :cascade do |t|
@@ -89,6 +96,7 @@ ActiveRecord::Schema.define(version: 20180414215344) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "account_id", null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
