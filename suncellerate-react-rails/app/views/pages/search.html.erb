@@ -1,0 +1,28 @@
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&libraries=places"></script>
+
+<script type="text/javascript">
+	function setUpSearch(){
+        google.maps.event.addDomListener(window, 'turbolinks:load', function () {
+            var places = new google.maps.places.Autocomplete(document.getElementById('search-query'));
+            google.maps.event.addListener(places, 'place_changed', function () {
+                var place = places.getPlace();
+                var address = place.formatted_address;
+                var latitude = place.geometry.location.lat();
+                var longitude = place.geometry.location.lng();
+                var mesg = "Address: " + address;
+                mesg += "\nLatitude: " + latitude;
+                mesg += "\nLongitude: " + longitude;
+                document.getElementById("lat-field").value = latitude
+                document.getElementById("long-field").value = longitude
+            });
+        });
+	}
+	$(document).on('turbolinks:load', setUpSearch())
+</script>
+
+<%= form_for :location, url: '/' do |f| %>
+<%= f.hidden_field :latitude, id: "lat-field"%>
+<%= f.hidden_field :longitude, id: "long-field"%>
+<%= f.text_field :location, id: "search-query", class: "form-control form-control-lg", placeholder:"Enter a location..." %>
+<%= f.submit "ANALYZE", class: "btn btn-block btn-lg btn-primary" %>
+<% end %>
