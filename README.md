@@ -10,6 +10,7 @@ Ruby 2.3.4
 On MacOS:
 #Rails app dependencies
 bundle install
+bundle exec figaro install
 
 #https://github.com/reactjs/react-rails#get-started-with-webpacker
 brew install yarn #enter "a" when prompted to overwrite all files
