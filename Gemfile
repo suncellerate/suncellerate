@@ -25,6 +25,8 @@ gem 'webpacker'
 
 gem 'activerecord-postgis-adapter'
 
+gem 'sendgrid-ruby'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
