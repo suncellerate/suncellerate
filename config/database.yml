@@ -17,7 +17,7 @@
 development:
   adapter: postgis
   encoding: unicode
-  database:
+  database: suncellerate
   pool: 5
   username:
   password:
@@ -49,7 +49,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database:
+  database: suncellerate
   pool: 5
   username:
   password:
@@ -60,7 +60,7 @@ production:
   host:
   adapter: postgresql
   encoding: unicode
-  database:
+  database: suncellerate
   pool: 5
   username:
   password:
