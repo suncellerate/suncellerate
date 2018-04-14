@@ -5,3 +5,5 @@ suncellerate
 
 bundle install
 rails s
+
+Visit localhost:3000
