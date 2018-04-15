@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 
-class Seed < ApplicationRecord
+class Seed < ActiveModel::Serializer
   belongs_to :share
   belongs_to :project
 end

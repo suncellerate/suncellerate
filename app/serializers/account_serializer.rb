@@ -8,7 +8,7 @@
 #  updated_at   :datetime         not null
 #
 
-class AccountSerializer < ApplicationRecord
+class AccountSerializer < ActiveModel::Serializer
   attributes :shares_count
 
   has_many :users

@@ -19,7 +19,7 @@
 #  updated_at    :datetime         not null
 #
 
-class Profile < ApplicationRecord
+class Profile < ActiveModel::Serializer
   attributes :first_name, :last_name, :address1, :address2, :city, :state, :postal_code, :country, :phone_number, :annual_income, :gender
   belongs_to :user
 end
