@@ -57,7 +57,7 @@ test:
 
 
 production:
-  url: <%= ENV['DATABASE_URL]'].sub(/^postgres/, "postgis") %>
+  url: <%= ENV.fetch('DATABASE_URL', '').sub(/^postgres/, "postgis") %>
   pool: 5
   timeout: 5000
 
