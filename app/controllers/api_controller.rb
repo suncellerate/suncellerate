@@ -1,4 +1,3 @@
 class ApiController < ActionController::API
-  protect_from_forgery with: :exception, prepend: true
-  before_action :authenticate_user!
+  include ActionController::MimeResponds
 end

@@ -5,6 +5,7 @@ require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'database_cleaner'
+require 'devise'
 
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
@@ -75,4 +76,28 @@ RSpec.configuration do |config|
       example.run
     end
   end
+end
+
+module ControllerHelpers
+  def login_with(user = double('user'), scope = :user)
+    current_user = "current_#{scope}".to_sym
+    if user.nil?
+      allow(request.env['warden']).to receive(:authenticate!).and_throw(:warden, {:scope => scope})
+      allow(controller).to receive(current_user).and_return(nil)
+    else
+      allow(request.env['warden']).to receive(:authenticate!).and_return(user)
+      allow(controller).to receive(current_user).and_return(user)
+    end
+  end
+end
+
+RSpec.configuration do |config|
+  config.include ControllerHelpers, type: :controller
+  Warden.test_mode!
+
+  config.after do
+    Warden.test_reset!
+  end
+  config.include Devise::TestHelpers, type: :controller
+  config.include Warden::Test::Helpers
 end
