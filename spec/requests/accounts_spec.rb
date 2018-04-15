@@ -1,6 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'Projects API', type: :request do
+  describe "GET /accounts" do
+    it "works! (now write some real specs)" do
+      get accounts_path
+      expect(response).to have_http_status(200)
+    end
+  end
+
   # initialize test data
   let!(:projects) { FactoryBot.create_list(:project, 6) }
   let(:project_id) { projects.first.id }
