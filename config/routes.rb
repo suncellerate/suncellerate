@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :hosts
   resources :accounts
   resources :controllers
   devise_for :users
