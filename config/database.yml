@@ -57,6 +57,7 @@ test:
 
 
 production:
+  url: <%= ENV['DATABASE_URL]'].sub(/^postgres/, "postgis") %>
   adapter: postgis
   encoding: unicode
   database: postgres
