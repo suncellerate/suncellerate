@@ -25,10 +25,11 @@
 #  account_id             :integer          not null
 #
 
-require 'test_helper'
-
-class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+class User < ApplicationRecord
+  attributes :email
+  has_one :profile
+  belongs_to :account
+  has_many :shares, through: :account
+  has_many :seeds, through: :shares
+  has_many :projects, through: :seeds
 end

@@ -9,4 +9,5 @@
 #
 
 class Host < ApplicationRecord
+  has_many :projects
 end

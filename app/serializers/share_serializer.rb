@@ -8,10 +8,8 @@
 #  updated_at :datetime         not null
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  account_id: 1
-
-two:
-  account_id: 1
+class Share < ApplicationRecord
+  belongs_to :account
+  has_one :seed
+  has_one :project, through: :seed
+end

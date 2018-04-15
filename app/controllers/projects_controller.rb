@@ -1,0 +1,2 @@
+class ProjectsController < ApiController
+end

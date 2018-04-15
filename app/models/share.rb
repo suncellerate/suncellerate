@@ -9,4 +9,7 @@
 #
 
 class Share < ApplicationRecord
+  belongs_to :account
+  has_one :seed
+  has_one :project, through: :seed
 end

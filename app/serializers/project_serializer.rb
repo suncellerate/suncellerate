@@ -19,10 +19,12 @@
 #  updated_at     :datetime         not null
 #
 
-require 'test_helper'
+class ProjectSerializer < ActiveModel::Serializer
+  attributes :id, :description, :address1, :address2, :city, :state, :postal_code, :country, :long_lat, :seeds_required, :share_price, :seeds_count
 
-class ProjectTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  belongs_to :host
+  has_many :seeds, counter_cache: true
+  has_many :shares, through: :seeds
+  has_many :accounts, through: :shares
+  has_many :users, through: :users
 end

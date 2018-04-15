@@ -20,4 +20,21 @@
 #
 
 class Project < ApplicationRecord
+  belongs_to :host
+  has_many :seeds, counter_cache: true
+  has_many :shares, through: :seeds
+  has_many :accounts, through: :shares
+  has_many :users, through: :users
+
+  validates_presence_of :description
+
+  before_validation :ensure_host
+
+  private
+
+  def ensure_host
+    unless host_id
+      self.host = Host.create(name: 'nice place')
+    end
+  end
 end

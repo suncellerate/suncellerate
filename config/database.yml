@@ -49,7 +49,7 @@ development:
 test:
   adapter: postgis
   encoding: unicode
-  database: suncellerate
+  database: suncellerate_test
   pool: 5
   username:
   password:

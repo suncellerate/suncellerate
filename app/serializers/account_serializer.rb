@@ -8,10 +8,11 @@
 #  updated_at   :datetime         not null
 #
 
-require 'test_helper'
+class AccountSerializer < ApplicationRecord
+  attributes :shares_count
 
-class AccountTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  has_many :users
+  has_many :shares, counter_cache: true
+  has_many :seeds, through: :shares
+  has_many :projects, through: :seeds
 end

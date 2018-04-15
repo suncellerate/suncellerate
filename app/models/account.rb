@@ -9,4 +9,8 @@
 #
 
 class Account < ApplicationRecord
+  has_many :users
+  has_many :shares, counter_cache: true
+  has_many :seeds, through: :shares
+  has_many :projects, through: :seeds
 end

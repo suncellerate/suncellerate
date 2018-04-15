@@ -32,7 +32,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :lockable, :timeoutable, :omniauthable
 
+  has_one :profile
   belongs_to :account
+  has_many :shares, through: :account
+  has_many :seeds, through: :shares
+  has_many :projects, through: :seeds
+
   before_validation :ensure_account
 
   private

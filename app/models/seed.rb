@@ -10,4 +10,6 @@
 #
 
 class Seed < ApplicationRecord
+  belongs_to :share
+  belongs_to :project
 end
