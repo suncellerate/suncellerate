@@ -25,7 +25,7 @@
 #  account_id             :integer          not null
 #
 
-class User < ActiveModel::Serializer
+class UserSerializer < ActiveModel::Serializer
   attributes :email
   has_one :profile
   belongs_to :account

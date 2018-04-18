@@ -8,7 +8,7 @@
 #  updated_at :datetime         not null
 #
 
-class Share < ActiveModel::Serializer
+class ShareSerializer < ActiveModel::Serializer
   belongs_to :account
   has_one :seed
   has_one :project, through: :seed
