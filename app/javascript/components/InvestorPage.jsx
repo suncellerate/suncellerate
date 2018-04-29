@@ -25,7 +25,7 @@ export default class InvestorPage extends React.Component {
           <h1> Thinking of Investing? </h1>
           <h2> Tell us where: </h2>
         </div>
-        <form action="/action_page.php">
+        <form>
           <h3> Zip Code: </h3>
           <input type="text" name="zip"/><br/>
           <h3> Email: </h3>
