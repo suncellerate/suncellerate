@@ -18,7 +18,9 @@ class App extends React.Component {
       <div className="App">
         {<SocialHeader />}
         {<NavBar />}
+        <div className={`container`}>
         {<LandingPage route={this.state.route} updateRoute={this.updateRoute.bind(this)}/>}
+        </div>
         {/*<InvestorPage/>*/}
         {<Footer />}
       </div>

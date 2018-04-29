@@ -77,18 +77,6 @@ body {
   margin: 1em 0em;
 }
 
-
-.container2 {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-}
-.page {
-    height: 100vh;
-    justify-content: flex-start;
-}
-
 .greeting {
     margin: 50px;
 }
@@ -164,4 +152,14 @@ footer > a {
 footer {
     background-color: white;
     padding: 1em;
+}
+
+.custom-select{
+    max-width: 50%;
+    display: block !important;
+    margin: 2em auto;
+}
+
+#find-projects{
+    margin-top: 1em;
 }
