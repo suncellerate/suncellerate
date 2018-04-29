@@ -25,7 +25,8 @@ class Search extends React.Component {
     })
   }
   render() {
-    const searchView = this.state.view === 'search' ?  <div>
+    const searchView = this.state.view === 'search' ?
+        <div className={`row`}>
           <SearchResults listings={sampleData} handleClick={this.handleClick.bind(this)}/>
         </div> : null
     const detailedView = this.state.view ==='detailedView' ? <DetailedView listing={this.state.clickedListing}/> : null
