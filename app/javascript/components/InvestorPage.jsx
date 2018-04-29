@@ -6,7 +6,7 @@ export default class InvestorPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      viewSearch: false 
+      viewSearch: false
     }
   }
 
@@ -20,7 +20,7 @@ export default class InvestorPage extends React.Component {
     const searchResults = this.state.viewSearch ? <Search /> : null
 
     return (
-      <div className={`page container`}>
+      <div className={`page container2`}>
         <div  className={`greeting`}>
           <h1> Thinking of Investing? </h1>
           <h2> Tell us where: </h2>

@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
+
  */
+
+ @import "font-awesome";
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -44,13 +47,6 @@ time, mark, audio, video {
     height: 80px;
 }
 
-.App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-}
-
 .App-title {
     font-size: 1.5em;
 }
@@ -74,10 +70,15 @@ body {
     font: 1em "Fira Sans", sans-serif;
     background-color: rbga(10, 111,32,0);
     background: asset-url("suncellerate-splash.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.who-select{
+  margin: 1em 0em;
 }
 
 
-.container {
+.container2 {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -87,12 +88,7 @@ body {
     height: 100vh;
     justify-content: flex-start;
 }
-.landing {
-    background: asset-url("suncellerate-splash.jpg") no-repeat center center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .greeting {
     margin: 50px;
 }
@@ -130,3 +126,24 @@ footer > a {
     color: #777;
     margin: 20px;
 }
+
+#social-header {
+    background-color: black;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    color: white;
+    overflow: hidden;
+}
+
+#social-header-links {
+    float: right;
+    padding-right: 1em;
+}
+
+#social-header i {
+    padding: .2em;
+    font-size: 1.5em;
+}
+
+

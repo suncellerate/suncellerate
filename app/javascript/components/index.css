@@ -10,8 +10,12 @@ body {
   background-image: url("./suncellerate-splash.jpg");
 }
 
+.who-select{
+  padding: 1em;
+  margin: 1em;
+}
 
-.container {
+.container2 {
   display: flex;
   justify-content: center;
   align-content: center;

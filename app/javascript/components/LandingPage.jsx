@@ -14,21 +14,21 @@ export default class LandingPage extends React.Component {
       return <InvestorPage/>;
     }
     return (
-      <div className={`landing page container`}>
+      <div className={`landing page container2`}>
         <div  className={`greeting`}>
           <h1> Welcome to Suncellerate </h1>
           <h2> No roof? No Problem. </h2>
         </div>
-        <form className={`container`} onSubmit={this.handleSubmit.bind(this)}>
+        <form className={`container2`} onSubmit={this.handleSubmit.bind(this)}>
 
-          <div className={`dropdown container`}>
+          <div className={`dropdown container2`}>
             <h3 className={`dropdown-title`}> Who are you? </h3>
-              <select className={`dropdown`} size="3" onChange={this.handleChange.bind(this)}>
+              <select className={`custom-select custom-select-lg who-select`} size="3" onChange={this.handleChange.bind(this)}>
                 <option value="host">Host</option>
                 <option value="investor">Investor</option>
                 <option value="supplier">Supplier</option>
               </select>
-            <input type="submit" value="Get Started" />
+            <input type="submit" className={`btn btn-primary`} value="Get Started" />
           </div>
         </form>
       </div>
