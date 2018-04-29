@@ -15,13 +15,19 @@ class NavBar extends React.Component {
               <a className={`nav-link`} href="#">Home <span className={`sr-only`}>(current)</span></a>
             </li>
             <li className={`nav-item`}>
-              <a className={`nav-link`} href="#">Link</a>
+              <a className={`nav-link`} href="#">How It Works</a>
             </li>
             <li className={`nav-item`}>
-              <a className={`nav-link`} href="#">Link</a>
+              <a className={`nav-link`} href="#">Hosts</a>
             </li>
             <li className={`nav-item`}>
-              <a className={`nav-link`} href="#">Link</a>
+              <a className={`nav-link`} href="#">Invest</a>
+            </li>
+            <li className={`nav-item`}>
+              <a className={`nav-link`} href="#">Pay It Forward</a>
+            </li>
+            <li className={`nav-item`}>
+              <a className={`nav-link`} href="#">Contact Us</a>
             </li>
 
           </ul>
