@@ -19,10 +19,10 @@ class App extends React.Component {
         {<NavBar />}
         {<LandingPage route={this.state.route} updateRoute={this.updateRoute.bind(this)}/>}
         {/*<InvestorPage/>*/}
-        <footer>
-          <a href="#"> Contact </a>
-          <a href="#"> About </a>
-          <a href="#"> Legal </a>
+        <footer className={`footer`}>
+            <a href="#"> Contact </a>
+            <a href="#"> About </a>
+            <a href="#"> Legal </a>
         </footer>
       </div>
     );
