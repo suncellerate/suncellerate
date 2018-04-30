@@ -1,4 +1,6 @@
 import React from 'react';
+import SignOutLink from './SignOutLink.jsx'
+
 var $ = require('jquery')
 
 class AuthLinks extends React.Component {
@@ -10,7 +12,7 @@ class AuthLinks extends React.Component {
     }
   }
 
-  componentWillMount(){
+  componentDidMount(){
     $.ajax({
         method: "GET",
         url: "/auth/is_signed_in.json"
@@ -18,23 +20,27 @@ class AuthLinks extends React.Component {
       .done(function(data){
         this.setState({ signedIn: data.signed_in });
       }.bind(this));
-
   }
 
   render () {
-    console.log(this)
+    console.log(this.state.signedIn) //This print twice, once as false, then true.
+    //Based on what I have read, I think the component should render after any AJAX
+    //calls in componentDidMount occur, but this is not happening.
     if (this.state.signedIn == 'true'){
       return (
-        <div> YO </div>
+        <span>
+        <a href="/users/sign_up">Sign Up</a>
+        <a href="/users/sign_in">Sign In</a>
+        </span>
       );
     }
     else {
       return (
-        <div> NO </div>
+        <span>{<SignOutLink />}</span>
       );
     }
-
   }
+
 }
 
 export default AuthLinks;
