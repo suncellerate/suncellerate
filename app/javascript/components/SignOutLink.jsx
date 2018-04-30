@@ -32,7 +32,7 @@ class SignOutLink extends React.Component {
 
   render () {
     return (
-      <a onClick={this._signOut}>Sign Out</a>
+      <a className={`nav-link`} onClick={this._signOut}>Sign Out</a>
     );
   }
 }
