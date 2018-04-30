@@ -13,6 +13,7 @@ class App extends React.Component {
       route: 'landing',
     }
   }
+
   render() {
     return (
       <div className="App">
