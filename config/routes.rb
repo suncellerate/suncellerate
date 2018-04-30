@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#index'
 
+  get 'projects/search/:lat/:long/:radius' => "projects#search"
+
   resources :projects
 
   scope :auth do
