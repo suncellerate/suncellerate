@@ -3,7 +3,7 @@ import React from 'react';
 const Listing = (props) =>  (
     <div className={`col-md-6 col-lg-4`} onClick={ () => props.handleClick(props.listing)}>
       <div className={`listing`}>
-        <img src={require(`./${props.listing.image}.jpg`)} className={`listing-img`} />
+          <img src={require(`./home_1.jpg`)} className={`listing-img`} />
           <div>{props.listing.description}</div>
           <div>{props.listing.host}</div>
           <div>{props.listing.city}</div>

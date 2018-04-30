@@ -3,7 +3,6 @@ import Listing from './Listing.jsx'
 
 
 const SearchResults = (props) => {
-  console.log('props.listings', props.listings)
   return (
 	<div className={`row`}>
 		{props.listings.map(listing => {
