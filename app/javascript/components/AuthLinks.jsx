@@ -23,10 +23,7 @@ class AuthLinks extends React.Component {
   }
 
   render () {
-    console.log(this.state.signedIn) //This print twice, once as false, then true.
-    //Based on what I have read, I think the component should render after any AJAX
-    //calls in componentDidMount occur, but this is not happening.
-    if (this.state.signedIn == 'true'){
+    if (this.state.signedIn == 'false'){
       return (
         <span>
         <a href="/users/sign_up">Sign Up</a>
