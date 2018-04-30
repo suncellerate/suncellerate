@@ -1,6 +1,9 @@
 import React from 'react';
+import AuthLinks from './AuthLinks.jsx'
+var $ = require('jquery')
 
 class NavBar extends React.Component {
+
   render () {
     return (
       <nav className={`navbar navbar-expand-lg navbar-light bg-light`}>
@@ -29,6 +32,8 @@ class NavBar extends React.Component {
             <li className={`nav-item`}>
               <a className={`nav-link`} href="#">Contact Us</a>
             </li>
+
+            {<AuthLinks />}
 
           </ul>
         </div>
