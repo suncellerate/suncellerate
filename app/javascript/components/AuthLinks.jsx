@@ -26,8 +26,8 @@ class AuthLinks extends React.Component {
     if (this.state.signedIn == 'false'){
       return (
         <span>
-        <a href="/users/sign_up">Sign Up</a>
-        <a href="/users/sign_in">Sign In</a>
+        <a className={`nav-link`} href="/users/sign_up">Sign Up</a>
+        <a className={`nav-link`} href="/users/sign_in">Sign In</a>
         </span>
       );
     }
