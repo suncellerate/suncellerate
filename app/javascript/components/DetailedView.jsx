@@ -16,9 +16,9 @@ class DetailedView extends React.Component {
   render() {
     const percentage = (this.props.listing.raised / this.props.listing.goal).toFixed(2)
     const inputField = this.state.viewForm ? <form method='post'>
-         <h3> How Much Would you like to seed: </h3>
+         <h3> How Much Would You like To Seed? </h3>
          <input type="text" placeholder="$" /><br/>
-         <input type="submit" value="Submit"/>
+         <input className={`btn btn-primary`} type="submit" value="Submit"/>
        </form> : null
 
     return (
@@ -29,7 +29,7 @@ class DetailedView extends React.Component {
       <div>{this.props.listing.city}</div>
       <div>Seeds Required: {this.props.listing.seeds_required}</div>
       <div>Current Seed Count: {this.props.listing.seeds_count}</div>
-     <button type="button" onClick={this.handleButtonClick.bind(this)}>Seed this project</button>
+     <button className={`btn btn-primary`} type="button" onClick={this.handleButtonClick.bind(this)}>Seed This Project!</button>
        <p>&nbsp;</p>
      {inputField}
       </div>
