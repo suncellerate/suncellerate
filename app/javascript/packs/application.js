@@ -10,7 +10,8 @@
 import React from 'react';
 import '../components/App.css';
 import LandingPage from '../components/LandingPage.jsx';
-import InvestorPage from '../components/InvestorPage.jsx'
+import InvestorPage from '../components/InvestorPage.jsx';
+import 'bootstrap/dist/js/bootstrap';
 
 console.log('Hello World from Webpacker')
 // Support component names relative to this directory:

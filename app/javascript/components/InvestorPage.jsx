@@ -6,7 +6,7 @@ export default class InvestorPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      viewSearch: false 
+      viewSearch: false
     }
   }
 
@@ -20,18 +20,20 @@ export default class InvestorPage extends React.Component {
     const searchResults = this.state.viewSearch ? <Search /> : null
 
     return (
-      <div className={`page container`}>
-        <div  className={`greeting`}>
+      <div>
+        <div className={`greeting col-12`}>
           <h1> Thinking of Investing? </h1>
           <h2> Tell us where: </h2>
         </div>
-        <form action="/action_page.php">
-          <h3> Zip Code: </h3>
-          <input type="text" name="zip"/><br/>
-          <h3> Email: </h3>
-          <input type="text" name="email"/><br/>
-          <input type="submit" value="Submit" onClick={this.handleClick.bind(this)}/>
-        </form>
+        <div className={`col-12`}>
+          <form>
+            <h3> Zip Code: </h3>
+            <input type="text" name="zip"/><br/>
+            <h3> Email: </h3>
+            <input type="text" name="email"/><br/>
+            <input type="submit" className={`btn btn-primary`} id="find-projects" value="Find Projects!" onClick={this.handleClick.bind(this)}/>
+          </form>
+        </div>
       {searchResults}
       </div>
     );

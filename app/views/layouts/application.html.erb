@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ReactRailsExampleApp</title>
+    <title>Suncellerate</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
+    <%= stylesheet_pack_tag 'bootstrap' %>
+    <%= javascript_pack_tag 'bootstrap' %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if alert.present? %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+    <% if notice.present? %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
