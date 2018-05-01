@@ -22,8 +22,8 @@ class DetailedView extends React.Component {
        </form> : null
 
     return (
-      <div>
-    <img src={require(`./${this.props.listing.image}.jpg`)} />
+      <div className={`col-md-6 offset-md-3 col-lg-4 offset-md-4 listing`}>
+    <img src={require(`./home_1.jpg`)} />
       <div>{this.props.listing.description}</div>
       <div>{this.props.listing.host}</div>
       <div>{this.props.listing.city}</div>
