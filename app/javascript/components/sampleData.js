@@ -11,8 +11,8 @@ const sampleData = [
   seeds_required: '50',
   share_price:'10',
   seeds_count: '10',
-  created_at: 4, 
-  updated_at: 5, 
+  created_at: 4,
+  updated_at: 5,
   image: 'home_1'
 },
 {
@@ -92,7 +92,7 @@ const sampleData = [
   share_price: '10',
   seeds_count: '10',
   created_at: 0,
-  updated_at: 10, 
+  updated_at: 10,
   image: 'home_3'
 }
 ]

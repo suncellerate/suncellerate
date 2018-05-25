@@ -1,6 +1,6 @@
 import React from 'react';
 
-class NavBar extends React.Component {
+class Footer extends React.Component {
   render () {
     return (
       	<footer className={`footer`}>
@@ -12,4 +12,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default Footer;

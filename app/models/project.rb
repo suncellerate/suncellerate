@@ -30,6 +30,12 @@ class Project < ApplicationRecord
 
   before_validation :ensure_host
 
+  scope :within, -> (latitude, longitude, distance_in_miles = 1) {
+    where(%{
+     ST_Distance(long_lat, 'POINT(%f %f)') < %d
+    } % [longitude, latitude, distance_in_miles.to_i * 1609.34]) # approx
+  }
+
   private
 
   def ensure_host
